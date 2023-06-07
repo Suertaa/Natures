@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'style/home.css' %}"> {% endblock %}
+{% block title %} Home {% endblock %}
+{% block content %}
+  <div class="carddd">
+    <img src="{% static 'images/fill.jpg' %}" class="img-fluid"/>
+  </div>
+  <blockquote class="blockquote"><p>Adopting a pet is a chance to save a life, bring joy into your home,
+    and make a positive impact on the world.</p></blockquote>
+    <section class="containerr">
+      {% for kategoria in kategorit %}
+      <div class="cardd split">
+        <div class="imagee">
+          <img src="{{kategoria.kategoria_img.url}}"  alt="" />
+        </div>
+        <div class="contentt">
+          <h1>Adopt {{kategoria.kategoria_type}} </h1>
+          <p class="copy">Find your best friend here </p>
+          <a href= "{% url 'adoption' kategoria.kategoria_id %}" class="btn btn-outline-dark">Click</a>
+          </div>
+      </div>
+  {% endfor %}
+   </section>
+<header class="masthead">
+  <h1 class="site-title">INNOVATION FROM NATURE</h1>
+  <div class="intro">
+    <p>At Nature’s Protection the safeguarding of quality comes first. It is our core principle to which no concessions are made. Quality is a total concept for us, including the fine ingredients we use and the products we deliver as well as the service we provide to our loyal customers.</p>
+    <p>We congratulate you for choosing Nature’s Protection. It is the responsible and affordable choice if you seek optimal health and wellbeing for the dog and cat you care for.And also we thank you if you decide to adopt one of our little babies .</p>
+  </div>
+</header><!-- .masthead -->
+
+<main id="content" class="main-area">
+  <ul class="karta">
+    <li class="kart-item double">
+        <figure class="kart">
+          <img src="{% static 'images/topq.png' %}" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">Nature Protection </h3>
+            <p>Super Premium complete dry and wet food for dogs and cats.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="kart-item">
+        <figure class="kart">
+          <img class="imazh" src="{% static 'images/red.jpg' %}" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">Red Coat Dog</h3>
+            <p>Providing premium nutrition for red coat dogs we offer a range of high-quality food products tailored to meet their needs.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="kart-item">
+        <figure class="kart">
+          <img class="imazh" src="{% static 'images/white.jpg' %}" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">White Coat Dog</h3>
+            <p>Our food is made with high-quality ingredients that support overall health and wellness for all coat colors,incuding white coat dogs.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="kart-item">
+        <figure class="kart">
+          <img class="imazh" src="{% static 'images/black.jpg' %}" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">Black Coat Dog</h3>
+            <p>Our food is sepcially formulated for black coat dogs,promoting healthy skin and coat pigmentation , and overall wellness.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="kart-item">
+        <figure class="kart">
+          <img class="imazh" src="{% static 'images/homecat.jpg' %}" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">Cats Of All Breeds</h3>
+            <p>We are passionate about providing cats with the best nutrition possible , providing them with the energy they need to thrive and the optimal health</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    </ul>
+    </main>
+    <div class="center-container"> 
+      <h3 class="center-text">BEST SELLER </h3>
+    </div>
+    <div class="container">
+      <div class="row">
+       
+            <div class="column">
+          <div class="card">
+            <div class="content">
+              <div class="front">
+                <img class="profile" width="100%" src="{% static 'images/salmonwithkrill.jpg' %}" alt="">
+                <h2><i class="fa-solid fa-dog"></i> Salmon With Krill</h2>
+              </div>
+              <div class="back from-left">
+                <ul class="list">
+                  <li> 100% complete and balanced nutrition with certified highest quality salmon and unique Antarctic krill to keep young dogs in optimal condition.</li>
+                  <li>Certified highest quality salmon from Norway. </li>
+                  <li>Formula without wheat. It can help to reduce the risk of wheat gluten allergy.</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+     <div class="column">
+          <div class="card">
+            <div class="content">
+              <div class="front">
+                <img class="profile" width="100%" src="{% static 'images/antiage.jpg' %}" alt="">
+              <h2><i class="fa-solid fa-cat"></i>Anti Age Dry Food</h2>
+              </div>
+              <div class="back from-bottom">
+                <ul class="list">
+                  <li> 100% complete and balanced nutrition to maintain optimal health and strong immune system of your dog throughout his golden years.</li>
+                  <li>Especialy easily digestible poultry as the main source of highest quality proteins to ensure proper intestine function.</li>
+                  <li>Carefully selected balance of nutrients can ensure strong bones and joints, as well as maintain healthy teeth. </li>
+              </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      <div class="column">
+          <div class="card">
+            <div class="content">
+              <div class="front">
+                <img class="profile" width="100%" src="{% static 'images/breed.jpg' %}" alt="">
+                <h2><i class="fa-solid fa-dog"></i>All Breed Senior </h2>
+              </div>
+              <div class="back from-right">
+                <ul class="list">
+               <li> Feed contains taurine and omega fatty acids, which can help to bolster cardiac performance.</li>
+                <li> This pet food contains glucosamine, chondroitin, omega-3 fatty acid and silicium, which help to properly absorb these substances. Specially developed combination of vitamins and minerals (calcium, phosphorus, zinc) may help to strengthen bones.</li>
+               </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="newsletter-form">
+      <div class="container1">
+        <h2 class="text-center">JOIN THE COMMUNITY!</h2>
+      <p class="center">Sign up to receive emails for our new products and new pets to adopt.</p> 
+      </div>
+    
+      <form method ="POST">
+        {% csrf_token %}
+        <div class="form-group row">
+          <div class="col-sm-4">
+            <input type="text"class="form-control" id="name" name="name" placeholder="Your Name">
+          </div>
+          <div class="col-sm-4">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address">
+          </div>
+          <div class="col-sm-4">
+          <button type="subscribe">Subscribe</button>
+          {% if messages %}
+  <div class="messages">
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+{% endif %}
+          </div>
+        </div>
+      </form>
+    </div>
+
+    {% endblock %}
+
+
+ 

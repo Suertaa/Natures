@@ -1,0 +1,766 @@
+@import url('https://fonts.cdnfonts.com/css/lucida-handwriting-std');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@1&family=Inria+Serif:wght@300&display=swap');
+body{
+  font-family: 'IBM Plex Serif', serif;
+}
+/*navbar*/
+
+.nav-link , .dropdown-button{
+  font-family: 'Lucida Handwriting Std', sans-serif;
+  font-size: large;
+}
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars,
+.navbar-scroll .navbar-brand,
+.dropdown-button {
+  color: black;
+
+}
+
+.fixed-nav {
+    background-color: rgb(162, 98, 46); 
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: rgb(162, 98, 46);
+}
+li a .dropbtn{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(162, 98, 46);
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+   
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(162, 98, 46);
+    z-index: 1;
+  }
+  
+  .dropdown-menu a {
+    color: black;
+    text-decoration: none;
+    padding: 12px 16px;
+    display: block;
+  }
+  
+  .dropdown-menu a:hover {background-color:rgb(162, 98, 46);}
+  
+  .dropdown:hover .dropdown-menu {display: block;}
+  
+  .dropdown:hover .dropdown-button {background-color:rgb(162, 98, 46);} 
+
+  /*fundi navbar*/
+
+  /*fillimi blockquote*/
+  .blockquote {
+    
+    padding: 60px 90px 40px;
+    position: relative;
+}
+  .blockquote p {
+
+    font-size: 35px;
+    font-weight: 700px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.blockquote:before {
+  position: absolute;
+  font-family: 'FontAwesome';
+  top: 0;
+  
+  content:"\f10d";
+  font-size: 200px;
+  color: rgba(0,0,0,0.1);
+   
+}
+
+.blockquote::after {
+    content: "";
+    top: 20px;
+    left: 50%;
+    margin-left: -100px;
+    position: absolute;
+
+    height: 3px;
+    width: 200px;
+}
+/*fundi blockquote*/
+
+
+/*fillimi adopt*/
+.split:hover h1 {
+  color: #161616;
+}
+
+p {
+
+  line-height: 28px;
+  letter-spacing: 0.5px;
+}
+.split:hover p {
+  color: #161616;
+}
+
+.containerr {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+.containerr:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #dddcdc;
+  background-size: cover;
+  position: absolute;
+  opacity: 0.3;
+}
+
+.cardd {
+  width: 360px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.32);
+  cursor: pointer;
+  position: relative;
+  transform-origin: center;
+  transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  margin: 0 60px 0 0;
+}
+.cardd:last-child {
+  margin: 0;
+}
+.cardd:hover {
+  transform: scale(1.05);
+}
+.cardd .contentt {
+  padding: 40px 24px 48px 24px;
+  position: relative;
+}
+.cardd .contentt h1,
+.cardd .contentt p {
+  transition: all 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.cardd .contentt h1.copy,
+.cardd .contentt p.copy {
+  margin: 16px 0 0 0;
+}
+.cardd.split {
+  height: 480px;
+  background: rgba(22, 22, 22, 0.8);
+}
+.cardd.split:before {
+  content: "";
+  width: 100%;
+  height: 0;
+  background: #f3f3f3;
+  position: absolute;
+  bottom: 0;
+  transform-origin: bottom;
+  transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.cardd.split:hover:before {
+  height: 270px;
+}
+.cardd.split .imagee {
+  display: block;
+  position: relative;
+  height:37vh;
+}
+.cardd.split .imagee img {
+  width: 100%;
+  height: auto;
+}
+/*fundi adopt*/
+
+
+
+/*fillim kolazhi*/
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	display: block;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; 
+} 
+
+
+
+.imazh{
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+.masthead {
+	text-align: center;
+	border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.intro {
+  margin: 0 auto;
+  padding: 1em 1em 2em;
+  max-width: 50em;
+  font-size: 90%;
+  text-align: left;
+  line-height: 1.4em;
+  columns: 2;
+  column-gap: 2em;
+  font-size:1.2em;
+}
+
+.intro p {
+  margin: 0 0 1em;
+}
+
+.karta {
+	max-width: 25em;
+	margin: 1em auto;
+	padding: 0;
+	list-style-type: none;
+
+}
+
+.karta a {
+	display: block;
+	margin-bottom: 1em;
+	text-decoration: none;
+}
+
+.caption {
+	padding: 1em;
+	font-size: 90%;
+	color: black;
+}
+
+.caption-title {
+	margin: 0;
+	font-size: 1.6em;
+	line-height: 1em;
+  font-weight: bold;
+
+}
+
+
+
+.caption p {
+	margin-top: .5em;
+	margin-bottom: 0;
+  line-height: 1.3em;
+  font-size: 1.2em;
+}
+
+.karta a:focus .caption,
+.karta a:hover .caption {
+	background: hsl(0, 0%, 97%);
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+@supports (grid-area: auto) {
+
+	@media screen and (min-width: 27em) {
+
+		.karta {
+			margin: 0 auto;
+			padding: 1em;
+		}
+    
+    .kart-item,
+    .kart-item a {
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .karta a:focus,
+		.karta a:hover {
+			outline: 1px solid hsl(0, 0%, 80%);
+		}
+    
+    .karta a:focus .caption,
+    .karta a:hover .caption {
+      background: white;
+    }
+    
+		.kart {
+			margin: .5em;
+			display: grid;
+			grid-template-columns: 8em auto;
+      overflow: hidden;
+		}
+    
+    .kart-imazh {
+      height: 100%;
+      width: auto; 
+    }
+    
+    .caption {
+      background: white;
+    }
+    
+	}
+
+	@media screen and (min-width: 62em) {
+
+		.karta {
+			max-width: none;
+			margin: 1em 0;
+      padding: 0 1em;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, 25em);
+			grid-gap: 1em;
+			justify-content: center;
+		}
+
+		.double {
+			grid-row: span 3;
+		}
+
+		.double .kart {
+			display: block;
+		}
+    
+    .double img {
+      height: calc( (100% / 3) * 2 + .5em);
+    }
+
+	}
+
+}
+/*fund kolazhi*/
+
+/*fillim containeri me text */
+.center-container{
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: flex-start;
+  height:13vh;
+  background-color: #efefefe6;
+   }
+  .center-text{
+  text-align: center;
+  font-size:46px;
+  }
+  /*fund containeri*/
+
+  /*fillimi cards best seller*/
+  * {
+    box-sizing: border-box;
+  
+  }
+  .title{
+    font-size:60px;
+    padding:20px 0px;
+  }
+  .list{
+    font-weight: bold;
+    place-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .list>li{
+    margin-top:10px;
+  }
+
+  
+  .container{
+    width:1300px;
+    margin:0px auto;
+
+  
+  }
+  /* Float three columns side by side */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 700px) {
+    
+   .container{
+    width: 100%;
+  }
+    
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+    border-radius:10px;
+    cursor:pointer;
+  }
+  .card .profile{
+     border-radius:10px;
+     transition: 0.2s;
+  }
+  .card:hover .profile{
+    transform:scale(1.4);
+    border-top-right-radius:50px;
+    border-top-left-radius:50px;
+  }
+  
+  .card .content{
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow:hidden;
+  }
+  .card .content .back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color: #f1f1f1e6;
+    transition:1s;
+    
+    z-index:1;
+    padding:10px;
+  }
+  
+  .from-left{
+    top:0;
+    left:-100%;
+  }
+  .card:hover .content .from-left {
+     left:0%;
+  }
+  
+  .from-bottom{
+    top:100%;
+    left:0;
+  }
+  .card:hover .content .from-bottom {
+     top:0%;
+  }
+  
+  .from-right{
+    top:0%;
+    right:-100%;
+  }
+  .card:hover .content .from-right {
+     right:0;
+  }
+  
+  .card .content .back h3{
+    font-size:15px;
+    letter-spacing:2px;
+  }
+  .card .content .back .tem-img{
+    border-radius:100%;
+  }
+  
+  .card .content .back .des{
+    font-size:13px;
+    padding:20px 0px;
+  }
+  .card .content .back .social-icon{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+  }
+  .card .content .back .social-icon li{
+    display:inline-block;
+  }
+  
+  .card .content .back .social-icon li a{
+    display:block;
+    background:#333;
+    color:#fff;
+    width:40px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    border-radius:100%;
+  }
+/*fund cards best seller*/
+.newsletter-form {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container1 {
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  color: black;
+ 
+}
+
+.text-center {
+  text-align: center;
+}
+.center{
+  text-align: center;
+}
+button[type="subscribe"] {
+  background-color: rgb(162, 98, 46);
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width:100%;
+}
+#name, #email {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom:40px;
+  padding: 10px;
+}
+
+  /*footer*/
+
+.footer-distributed{
+  background: rgb(56, 54, 54);
+  box-shadow: 0 1px 1px 0 rgb(255, 255, 255);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px ;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Lucida Handwriting Std', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  rgb(141, 61, 30);
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #fff8f8;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  rgb(141, 61, 30);
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-ic{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-ic a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+
+
+

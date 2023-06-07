@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png"  height="70" alt=""/>
+      </a>
+      <a class="nav-link" aria-current="page" href="{% url 'home' %}">Nature Protection</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icond-flex justify-content-start align-items-center" >
+          <i class="fas fa-bars"></i>
+      </span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'about' %}">About Us</a>
+          </li>
+            
+          <div class="dropdown">
+            <button type="button" class="btn dropdown-button" data-bs-toggle="dropdown">
+              Products  <i class="fa-sharp fa-solid fa-caret-down"></i> 
+            </button>
+            
+            <ul class="dropdown-menu">
+              {% for category in categories %}
+              <li><a class="dropdown-item" href="{% url 'category_products' category.category_id %}">{{category.category_type}}</a></li>
+              {% endfor %}
+            </ul>
+          
+          </div> 
+          <div class="dropdown">
+            <button type="button" class="btn dropdown-button" data-bs-toggle="dropdown">
+              Adoption <i class="fa-solid fa-caret-down"></i>  
+            </button>
+            
+            <ul class="dropdown-menu">
+              {% for kategoria in kategorit %}
+              <li><a class="dropdown-item" href="{% url 'adoption' kategoria.kategoria_id %}">{{kategoria.kategoria_type}}</a></li>
+          {% endfor %}
+              </ul>
+              </div>
+       
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'contact' %}">Contact</a>
+          </li>
+
+        
+          <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link px-2" href="https://www.facebook.com/NaturesProtection/">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2" href="https://www.instagram.com/naturesprotection_official/">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+         </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>
